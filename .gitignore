@@ -13,7 +13,10 @@ tmp
 logs
 
 # other ruby-specific files
+*.gem
 coverage/
+doc
+rdoc
 pkg/
 .yardoc
 .bundle

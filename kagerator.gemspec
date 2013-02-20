@@ -5,13 +5,13 @@ Gem::Specification.new do |gem|
   gem.name        = 'kagerator'
   gem.version     = Kagerator::VERSION
   gem.platform    = Gem::Platform::RUBY
-  gem.summary     = 'For consuming KAG API'
-  gem.description = ''
+  gem.summary     = 'Easy consumption of the KAG API'
+  gem.description = 'Easy, quick consumption and reading of the King Arthur\'s Gold Public API'
   gem.licenses    = %w(GPLv2)
 
   gem.authors     = ['Shaun McCormick']
   gem.email       = %w(splittingred@gmail.com)
-  gem.homepage    = 'https://github.com/splittingreg/kagerator'
+  gem.homepage    = 'https://github.com/splittingred/kagerator'
 
   gem.required_ruby_version     = '>= 1.9.2'
   gem.required_rubygems_version = '>= 1.3.6'
