@@ -22,6 +22,9 @@ module Kagerator
 
     def execute &block
       response = ::RestClient.send(@method,'https://api.kag2d.com/'+@url)
+      if block_given?
+        block.call(response, self, & block)
+      end
       Kagerator::Response.new(response)
     end
   end
