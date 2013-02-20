@@ -1,6 +1,8 @@
 require 'spec_helper'
 require 'lib/kagerator'
-
+##
+# Testing for the player functions
+#
 describe Kagerator do
   subject { }
 

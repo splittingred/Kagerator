@@ -1,6 +1,8 @@
 require 'spec_helper'
 require 'lib/kagerator'
-
+##
+# Testing for the server functions
+#
 describe Kagerator do
   subject { }
 
@@ -14,6 +16,11 @@ describe Kagerator do
 
   it "ensure servers() works" do
     servers = Kagerator.servers
+    servers.should_not eq(false)
+  end
+
+  it "ensure servers() with empty/full filter works" do
+    servers = Kagerator.servers({:empty => 0,:full => 0})
     servers.should_not eq(false)
   end
 end

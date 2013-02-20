@@ -3,6 +3,7 @@ require File.dirname(__FILE__)+'/response'
 
 module Kagerator
   include RestClient
+  API_URL = 'https://api.kag2d.com/'
 
   class Request
     def self.execute(args, &block)
@@ -21,7 +22,7 @@ module Kagerator
     end
 
     def execute &block
-      response = ::RestClient.send(@method,'https://api.kag2d.com/'+@url)
+      response = ::RestClient.send(@method,API_URL+@url)
       if block_given?
         block.call(response, self, & block)
       end
