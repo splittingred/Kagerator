@@ -19,8 +19,10 @@ Gem::Specification.new do |gem|
   gem.files        = Dir['README.md', 'lib/**/*']
   gem.require_path = 'lib'
 
-  gem.add_runtime_dependency "rest-client", "~> 1.6.7"
+  gem.add_runtime_dependency "rest-client", "1.6.7"
   gem.add_runtime_dependency "json", "1.7.6"
+  gem.add_runtime_dependency "symboltable", "1.0.2"
+  gem.add_runtime_dependency "jruby-openssl", "0.7.7"
   #gem.add_runtime_dependency 'timers', '>= 1.0.0'
 
   gem.add_development_dependency 'rake'
