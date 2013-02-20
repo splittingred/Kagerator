@@ -1,19 +1,21 @@
 require File.dirname(__FILE__) + '/kagerator/request'
 
 module Kagerator
-  def self.player(name,avatar = true)
+  def self.player(name,load_avatar = true)
     player = Kagerator::Request.execute({
       :url => "player/#{name}/status",
       :method => :get
     })
     if player
       player = player.from_json
-      avatar = Kagerator::Request.execute({
-        :url => "player/#{name}/avatar",
-        :method => :get
-      })
-      if avatar
-        player[:avatar] = avatar.from_json
+      if load_avatar
+        avatar = Kagerator::Request.execute({
+          :url => "player/#{name}/avatar",
+          :method => :get
+        })
+        if avatar
+          player[:avatar] = avatar.from_json
+        end
       end
       player
     else
