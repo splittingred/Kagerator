@@ -1,0 +1,12 @@
+script: rake ci
+rvm:
+  - 1.9.3
+  - ruby-head
+  - jruby-19mode
+  - jruby-head
+  - rbx-19mode
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - rvm: jruby-head
